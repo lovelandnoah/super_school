@@ -1,0 +1,11 @@
+<h1>Hello these are my Schools!!!</h1>
+<h3>Noah's Schools</h3>
+<hr />
+
+<% @schools.each do |school| %>
+	<button><%= link_to school.name, school_path(school) %></button>
+<% end %>
+<br />
+<br />
+<hr />
+<h5><%= @schools.all.pluck(:name) %></h5>
